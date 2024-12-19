@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+// Custom SCSS variables and styles
+$brand-pink: #FF6FB5;
+$brand-light: #FFF4F8;
+$brand-dark: #7A3E54;
+
 body {
   @apply bg-brand-light font-sans text-brand-dark;
 }
 
 .button-primary {
   @apply px-8 py-4 text-white bg-brand-dark rounded-full shadow-lg;
-  @apply hover:bg-brand-pink;
+  &:hover {
+    @apply bg-brand-pink;
+  }
 }
