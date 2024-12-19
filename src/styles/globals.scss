@@ -2,18 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-// Custom SCSS variables and styles
+// Custom Theme Variables
 $brand-pink: #FF6FB5;
 $brand-light: #FFF4F8;
 $brand-dark: #7A3E54;
 
+// Global Styles
 body {
-  @apply bg-brand-light font-sans text-brand-dark;
+  @apply font-sans text-brand-dark bg-brand-light;
 }
 
-.button-primary {
-  @apply px-8 py-4 text-white bg-brand-dark rounded-full shadow-lg;
-  &:hover {
-    @apply bg-brand-pink;
-  }
+nav {
+  @apply fixed w-full z-50 bg-brand-dark shadow-md;
+}
+
+ul {
+  @apply list-none;
+}
+
+button {
+  @apply focus:outline-none;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+.menu-item {
+  @apply text-xl cursor-pointer hover:text-brand-pink transition;
 }
